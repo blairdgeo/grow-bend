@@ -6,7 +6,7 @@ lib-cov
 *.out
 *.pid
 *.gz
-index.html
+index.htm
 ui_components
 
 pids
