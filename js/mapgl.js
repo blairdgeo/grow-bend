@@ -5,7 +5,7 @@
     urbanlayers.map.isLoaded = isLoaded;
     urbanlayers.map.map = map;
 
-    var minYear = 1990,
+    var minYear = 1900,
         maxYear = 2015,
         _map,
         _isLoaded = false,
@@ -23,7 +23,7 @@
         colorScale = d3.scale.quantile()
                         // using 1855 for start, because there are less buildings built before that date. Using 1765 for minimum "shifts" the visual result towards the blue gamma
                         // using 2015 for max range, to achieve exact intervals of 20 years: 1895, 1915, 1935, etc
-                        .domain(d3.range(1992, 2015 + 1))
+                        .domain(d3.range(1900, 2015 + 1))
                         //.range(colorbrewer.RdYlBu[9]),
                         //.range(colorbrewer.Spectral[9]),
                         //.range(colorbrewer.BrBG[9]),
