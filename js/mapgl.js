@@ -120,15 +120,15 @@
             };
 
             // list of pbf tiles, that we need to pre-load
-            /*var tilesQueue = [
-                '11/603/769',
-                '11/602/769'
+            var tilesQueue = [
+                '10/167/371',
+                '10/167/372'
                 //'11/601/769',
                 //'11/603/770'
             ], totalCount = tilesQueue.length;
-            */
+            
             // listen for tiles being loaded
-            buildingsSource.on('load', function(event) {
+            buildingsSource.on('tile.load', function(event) {
                 console.log("Tile Loaded!");
                 var tile = event.tile;
                 //console.log(tile.url);
@@ -156,8 +156,8 @@
                 }
             });
 
-                    l.stop();
-                    _isLoaded = true;
+                   // l.stop();
+                   //_isLoaded = true;
 
 
             // Add the Basemap -----------------------------------------------------------------------------
@@ -228,7 +228,7 @@
         // add the active class
         layer["style.active-"+yearbuilt.toString()] = {
             "fill-color": color,
-            "fill-opacity": "1.0"
+            "fill-opacity": "0.7"
         };
 
         return layer;
