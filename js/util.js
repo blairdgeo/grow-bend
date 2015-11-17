@@ -50,9 +50,10 @@
         if (isIE11) {
             return false;
         }
+        return true;
 
         // rely on mapbox detection by default:
-        return mapboxgl.util.supported();
+       // return mapboxgl.util.supported();
     }
 
 })();

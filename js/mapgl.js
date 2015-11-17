@@ -43,13 +43,13 @@
 
         var dfd = new jQuery.Deferred();
 
-        mapboxgl.util.getJSON('data/nyc-style.json', function (err, style) {
+        mapboxgl.util.getJSON('data/bend-style.json', function (err, style) {
             if (err) throw err;
 
             // enable more details ... this prooved to break rendering with some browsers
             // so we only enable it conditionally
             if (urbanlayers.util.detailMode()) {
-                style.sources["nycBuildings"].url = "http://io.morphocode.com/urban-layers/data/nyc-mn-tiles-details.tilejson";
+                style.sources["bend_taxlots"].url = "http://localhost:82/data/bend-tiles.tilejson";
             }
 
             // style for the basemap
@@ -74,21 +74,23 @@
             _map = new mapboxgl.Map({
                 container: 'map',
                 style: style,
-                center: [40.774066683777875, -73.97723823183378],
+                center: [-121.31, 44.06],
                 minZoom: 10,
                 zoom: 11,
                 maxZoom: (urbanlayers.util.detailMode()) ? 16 : 14
             });
 
             // always show non-_mapped buildings
-            _map.style.addClass("active-0");
+            _map.addClass("active-0");
 
             // add the compass
             _map.addControl(new mapboxgl.Navigation());
 
 
             // Preload the largest map tiles -----------------------------------------------------------------------------
-            var buildingsSource = _map.sources['nycBuildings'];
+            var buildingsSource = _map.getLayer('bend_taxlots');
+
+            console.log(_map.sources);
 
             // Init the loader button - we're using ladda
             // https://github.com/hakimel/Ladda
@@ -117,8 +119,8 @@
 
             // list of pbf tiles, that we need to pre-load
             var tilesQueue = [
-                '11/603/769',
-                '11/602/769'
+                //'11/603/769',
+                //'11/602/769'
                 //'11/601/769',
                 //'11/603/770'
             ], totalCount = tilesQueue.length;
@@ -205,9 +207,9 @@
         }
 
         var layer = {
-            "id": "buildings_" + yearbuilt.toString(),
-            "source": "nycBuildings",
-            "source-layer": "buildings_mn",
+            "id": "OBJECTID" + yearbuilt.toString(),
+            "source": "bend_taxlots",
+            "source-layer": "bend_taxlots_95_plus",
             "filter": {"year_built": yearbuilt},
             "type": "fill"
         };

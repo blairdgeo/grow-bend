@@ -1,0 +1,25 @@
+{
+  "version": 4,
+  "sprite": "",
+  "glyphs": "",
+  "constants": {
+    "@land": "rgb(244,239,225)",
+    "@water": "#cdd"
+  },
+  "sources": {
+    "bend_taxlots": {
+      "type": "vector",
+      "url": "http://localhost:82/data/bend-tiles.tilejson",
+      "maxZoom": 15
+    }
+  },
+  "layers": [
+    {
+        "id": "background",
+        "style": {
+          "background-color": "@land"
+        },
+        "type": "background"
+    }
+    ]
+}

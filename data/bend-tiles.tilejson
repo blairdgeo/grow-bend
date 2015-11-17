@@ -1,0 +1,31 @@
+{
+    "tilejson": "2.0.0",
+
+    "name": "compositing",
+
+    "description": "Bend Taxlots",
+
+    "version": "1.0.0",
+
+    "attribution": "",
+
+    "legend": "",
+
+    "scheme": "xyz",
+
+    "tiles": [
+        "http://localhost:82/data/tiles/bendOr/{z}/{x}/{y}.pbf"
+    ],
+
+    "grids": [
+        "http://localhost:8888/admin/1.0.0/broadband/{z}/{x}/{y}.grid.json"
+    ],
+
+    "minzoom": 8,
+
+    "maxzoom": 11,
+
+    "bounds": [ -180, -85.05112877980659, 180, 85.0511287798066 ],
+
+    "center": [ -121.3092, 44.057, 16 ]
+}
