@@ -159,7 +159,7 @@
         if (isFirstTime) {
             var map = urbanlayers.map.map(),
                 mapDemo = true;
-            map.flyTo([40.774066683777875, -73.97723823183378], 13, -61);
+            map.flyTo([44.057, -121.3092], 14, 0);
             map.on('moveend', function(e) {
                 if (mapDemo) {
                     urbanlayers.graph.demo(function() {

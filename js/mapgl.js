@@ -5,8 +5,8 @@
     urbanlayers.map.isLoaded = isLoaded;
     urbanlayers.map.map = map;
 
-    var minYear = 1765,
-        maxYear = 2014,
+    var minYear = 1990,
+        maxYear = 2015,
         _map,
         _isLoaded = false,
 
@@ -23,7 +23,7 @@
         colorScale = d3.scale.quantile()
                         // using 1855 for start, because there are less buildings built before that date. Using 1765 for minimum "shifts" the visual result towards the blue gamma
                         // using 2015 for max range, to achieve exact intervals of 20 years: 1895, 1915, 1935, etc
-                        .domain(d3.range(1855, 2015 + 1))
+                        .domain(d3.range(1990, 2015 + 1))
                         //.range(colorbrewer.RdYlBu[9]),
                         //.range(colorbrewer.Spectral[9]),
                         //.range(colorbrewer.BrBG[9]),
@@ -49,8 +49,9 @@
             // enable more details ... this prooved to break rendering with some browsers
             // so we only enable it conditionally
             if (urbanlayers.util.detailMode()) {
-                style.sources["bend_taxlots"].url = "http://localhost:82/data/bend-tiles.tilejson";
+                style.sources["bend_oregon_taxlots"].url = "http://localhost:82/data/bend-tiles.tilejson";
             }
+
 
             // style for the basemap
             style.layers.push({
@@ -68,30 +69,31 @@
             style.layers = style.layers.concat(generateAllLayers(minYear, maxYear));
             //fix for non-mapped buildings:
             var nonmappedLayer = generateLayer(0);
+
+            console.log("Layers", style.layers);
             style.layers.push(nonmappedLayer);
 
             // init the _map
             _map = new mapboxgl.Map({
                 container: 'map',
                 style: style,
-                center: [-121.31, 44.06],
+                center: [ 44.057, -121.3092],
                 minZoom: 10,
-                zoom: 11,
-                maxZoom: (urbanlayers.util.detailMode()) ? 16 : 14
+                zoom: 10,
+                maxZoom: (urbanlayers.util.detailMode()) ? 14: 14
             });
 
             // always show non-_mapped buildings
-            _map.addClass("active-0");
+            _map.style.addClass("active-0");
 
             // add the compass
             _map.addControl(new mapboxgl.Navigation());
 
 
             // Preload the largest map tiles -----------------------------------------------------------------------------
-            var buildingsSource = _map.getLayer('bend_taxlots');
+            var buildingsSource = _map.sources['bend_oregon_taxlots'];
 
-            console.log(_map.sources);
-
+            console.log("Building Source!", buildingsSource);
             // Init the loader button - we're using ladda
             // https://github.com/hakimel/Ladda
             var button = document.querySelector( '#btn-get-started-loader' );
@@ -118,16 +120,16 @@
             };
 
             // list of pbf tiles, that we need to pre-load
-            var tilesQueue = [
-                //'11/603/769',
-                //'11/602/769'
+            /*var tilesQueue = [
+                '11/603/769',
+                '11/602/769'
                 //'11/601/769',
                 //'11/603/770'
             ], totalCount = tilesQueue.length;
-
+            */
             // listen for tiles being loaded
-            buildingsSource.on('tile.load', function(event) {
-
+            buildingsSource.on('load', function(event) {
+                console.log("Tile Loaded!");
                 var tile = event.tile;
                 //console.log(tile.url);
                 // remove the tile from the queue, once loaded
@@ -153,6 +155,9 @@
                     _isLoaded = true;
                 }
             });
+
+                    l.stop();
+                    _isLoaded = true;
 
 
             // Add the Basemap -----------------------------------------------------------------------------
@@ -207,10 +212,10 @@
         }
 
         var layer = {
-            "id": "OBJECTID" + yearbuilt.toString(),
-            "source": "bend_taxlots",
-            "source-layer": "bend_taxlots_95_plus",
-            "filter": {"year_built": yearbuilt},
+            "id": "buildings_" + yearbuilt.toString(),
+            "source": "bend_oregon_taxlots",
+            "source-layer": "bend_oregon_taxlots",
+            "filter": {"yearbuilt": yearbuilt.toString()},
             "type": "fill"
         };
 
@@ -267,7 +272,7 @@
             }
         }, 100);
 
-
+        startYear = 1990;
         var classes = [];
         for(var i = startYear; i <= endYear; i++) {
             classes.push("active-" + i);

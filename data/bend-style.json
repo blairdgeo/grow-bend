@@ -7,10 +7,10 @@
     "@water": "#cdd"
   },
   "sources": {
-    "bend_taxlots": {
+    "bend_oregon_taxlots": {
       "type": "vector",
       "url": "http://localhost:82/data/bend-tiles.tilejson",
-      "maxZoom": 15
+      "maxZoom": 14
     }
   },
   "layers": [
