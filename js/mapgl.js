@@ -272,7 +272,7 @@
             }
         }, 100);
 
-        startYear = 1990;
+        //startYear = 1990;
         var classes = [];
         for(var i = startYear; i <= endYear; i++) {
             classes.push("active-" + i);
