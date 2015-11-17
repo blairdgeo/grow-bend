@@ -1,0 +1,8 @@
+{
+    "center": "-121.3145,44.0612,12", 
+    "format": "pbf", 
+    "json": "{\"vector_layers\":[{\"id\":\"bend_oregon_taxlots\",\"description\":\"bend_taxlots\",\"fields\":{\"TAXLOT\":\"String\",\"yearbuilt\":\"String\"}}]}", 
+    "minzoom": "8", 
+    "maxzoom": "14", 
+    "name": "bend_taxlots"
+}
