@@ -49,7 +49,7 @@
             // enable more details ... this prooved to break rendering with some browsers
             // so we only enable it conditionally
             if (urbanlayers.util.detailMode()) {
-                style.sources["bend_oregon_taxlots"].url = "http://bend.smartmine.com/data/bend-tiles.tilejson";
+                style.sources["bend_oregon_taxlots"].url = "http://localhost:1337/data/bend-tiles.tilejson";
             }
 
 
