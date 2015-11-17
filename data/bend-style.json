@@ -9,7 +9,7 @@
   "sources": {
     "bend_oregon_taxlots": {
       "type": "vector",
-      "url": "http://localhost:82/data/bend-tiles.tilejson",
+      "url": "http://bend.smartmine.com/data/bend-tiles.tilejson",
       "maxZoom": 14
     }
   },
