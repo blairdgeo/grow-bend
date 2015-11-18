@@ -203,7 +203,7 @@
               {
                 element: document.querySelector('#legend'),
                 intro: "<h4>Legend</h4> <p> The <strong>oldest taxlot sales</strong> are shown in <strong>red</strong>. <strong>Recent taxlot sales</strong> are shown in <strong>blue</strong>.</p>",
-                position: 'bottom'
+                position: 'top'
 
               },
               {
