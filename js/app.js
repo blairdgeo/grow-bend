@@ -211,11 +211,11 @@
                 intro: "<h4>Zoom Controls</h4> <p>Click to <strong>zoom</strong> or <strong>rotate</strong> the map.</p>",
                 position: 'bottom'
               },
-              {
+             /* {
                 element: document.querySelector('.navbar-nav'),
                 intro: "<h4>Learn More</h4> <p> Follow us on Twitter or send us a message.</p>",
                 position: 'bottom'
-              }
+              }*/
             ]
         });
 
