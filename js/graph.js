@@ -69,7 +69,7 @@
             .tickSize(width)
             .orient("right")
             .tickFormat(function(d) {
-                return d === 8000 ? d + " Buildings" : d;
+                return d === 8000 ? d + " Sales" : d;
             });
 
         // Add the clip path.
@@ -440,7 +440,7 @@
                     .style("top",  posY + margin.top + "px")
                     // flip tooltip position near the two ends
                     .classed("inverse", (sliderName == 'range-start' && posX < 100) || (sliderName == 'range-end' && posX > width - 100) );
-                tooltipContents.html(d.count + " Building" + (d.count > 1 ? 's' : ''));
+                tooltipContents.html(d.count + " Sales" + (d.count > 1 ? 's' : ''));
 
 
                 yearSpan.html(newValue);
