@@ -159,7 +159,7 @@
         if (isFirstTime) {
             var map = urbanlayers.map.map(),
                 mapDemo = true;
-            map.flyTo([44.057, -121.3092], 14, 0);
+            map.flyTo([44.057, -121.3092], 11, 0);
             map.on('moveend', function(e) {
                 if (mapDemo) {
                     urbanlayers.graph.demo(function() {
@@ -187,12 +187,12 @@
             steps: [
               {
                 element: document.querySelector('.range-start .slider-thumb'),
-                intro: "<h4>Timeline</h4><p><strong>Drag the sliders</strong> to change the time period. <br/> Only buildings built during the selected time frame will be visible on the map.</p>",
+                intro: "<h4>Timeline</h4><p><strong>Drag the sliders</strong> to change the time period. <br/> Only taxlots sold during the selected time frame will be visible on the map.</p>",
                 position: 'left'
               },
               {
                 element: document.querySelector('#map-controls'),
-                intro: "<h4>Graph</h4><p><strong>The graph shows when were current buildings of Mahnattan built</strong>.</p> The <em>X</em> axis represents the <em>year of construction</em>.<br/> The <em>Y</em> axis shows the <em>number of buildings built</em> in each year.</p>",
+                intro: "<h4>Graph</h4><p><strong>The graph shows when were County taxlots of Bend sold</strong>.</p> The <em>X</em> axis represents the <em>year of construction</em>.<br/> The <em>Y</em> axis shows the <em>number of taxlots sold</em> in each year.</p>",
                 position: 'bottom'
               },/*
               {
@@ -202,7 +202,7 @@
               },*/
               {
                 element: document.querySelector('#legend'),
-                intro: "<h4>Legend</h4> <p> The <strong>oldest buildings</strong> are coloured in <strong>red</strong>. <strong>Recent buildings</strong> are shown in <strong>blue</strong>.</p>",
+                intro: "<h4>Legend</h4> <p> The <strong>oldest taxlots</strong> are coloured in <strong>red</strong>. <strong>Recent taxlot sales</strong> are shown in <strong>blue</strong>.</p>",
                 position: 'top'
               },
               {
@@ -212,7 +212,7 @@
               },
               {
                 element: document.querySelector('.navbar-nav'),
-                intro: "<h4>Learn More</h4> <p> Meet the team and Learn more about the project.</p>",
+                intro: "<h4>Learn More</h4> <p> Follow us on Twitter or send us a message.</p>",
                 position: 'bottom'
               }
             ]
