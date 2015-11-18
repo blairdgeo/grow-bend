@@ -192,7 +192,7 @@
               },
               {
                 element: document.querySelector('#map-controls'),
-                intro: "<h4>Graph</h4><p><strong>The graph shows when were County taxlots of Bend sold</strong>.</p> The <em>X</em> axis represents the <em>year of construction</em>.<br/> The <em>Y</em> axis shows the <em>number of taxlots sold</em> in each year.</p>",
+                intro: "<h4>Graph</h4><p><strong>The graph shows when were County taxlots of Bend sold</strong>.</p> The <em>X</em> axis represents the <em>year of sale</em>.<br/> The <em>Y</em> axis shows the <em>number of taxlots sold</em> in each year.</p>",
                 position: 'bottom'
               },/*
               {

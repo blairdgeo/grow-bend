@@ -14,7 +14,7 @@
     "scheme": "xyz",
 
     "tiles": [
-        "http://localhost:1337/data/tiles/bendOr/{z}/{x}/{y}.pbf"
+        "http://bend.smartmine.com/data/tiles/bendOr/{z}/{x}/{y}.pbf"
     ],
 
     "grids": [
