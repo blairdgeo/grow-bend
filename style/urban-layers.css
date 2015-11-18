@@ -975,9 +975,9 @@ a#morphocode-logo:hover {
 #legend {
     padding: 10px;
     position: absolute;
-    top: 70px;
+    bottom: 152px;
     background: rgba(255, 255, 255, 0.8);
-    right: 10px;
+    right: 5px;
     width: 500px;
 }
 
