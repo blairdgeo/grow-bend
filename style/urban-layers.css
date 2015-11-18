@@ -90,7 +90,7 @@ nav {
 
 .mapboxgl-ctrl-nav {
     display: none;
-    top: 210px;
+    top: 70px;
     left: 30px;
     right: auto;
 }
@@ -118,7 +118,7 @@ body.thumb-drag {
     display: none;
     margin-top: 50px;
     position: absolute;
-    top: 0;
+    bottom: 0;
     font: 10px sans-serif;
     width: 100%;
 }
@@ -131,6 +131,7 @@ body.thumb-drag {
     background: white;
     opacity: 0.9;
     width: 100%;
+    border-top: solid 1px silver;
 }
 
 .buttons {
@@ -418,6 +419,7 @@ path.area#active-area {
 
 .navbar {
     margin-bottom: 0;
+    padding-top: 5px;
 }
 
 .navbar-inverse .navbar-nav>li>a , .dropdown-menu>li>a {
@@ -952,7 +954,7 @@ a#morphocode-logo:hover {
 .subscribe-form {
     border-top: 1px solid #ccc;
     margin-top: 60px;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 .subscribe-form h2 {
@@ -973,9 +975,9 @@ a#morphocode-logo:hover {
 #legend {
     padding: 10px;
     position: absolute;
-    bottom: 15px;
+    top: 70px;
     background: rgba(255, 255, 255, 0.8);
-    left: 30px;
+    right: 10px;
     width: 500px;
 }
 

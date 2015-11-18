@@ -5,7 +5,7 @@
     urbanlayers.map.isLoaded = isLoaded;
     urbanlayers.map.map = map;
 
-    var minYear = 1970,
+    var minYear = 1965,
         maxYear = 2015,
         _map,
         _isLoaded = false,

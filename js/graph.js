@@ -22,7 +22,7 @@
         // Set the dimensions of the canvas / graph
         margin = {top: 25, right: 30, bottom: 20, left: 30},
             width = $(window).width() - margin.left - margin.right,
-            height = 130 - margin.top - margin.bottom;
+            height = 148 - margin.top - margin.bottom;
 
         // Add an SVG element with the desired dimensions and margin.
         var canvas = d3.select("#map-controls")

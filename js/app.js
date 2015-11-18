@@ -188,12 +188,12 @@
               {
                 element: document.querySelector('.range-start .slider-thumb'),
                 intro: "<h4>Timeline</h4><p><strong>Drag the sliders</strong> to change the time period. <br/> Only taxlots sold during the selected time frame will be visible on the map.</p>",
-                position: 'left'
+                position: 'top'
               },
               {
                 element: document.querySelector('#map-controls'),
                 intro: "<h4>Graph</h4><p><strong>The graph shows when were County taxlots of Bend sold</strong>.</p> The <em>X</em> axis represents the <em>year of sale</em>.<br/> The <em>Y</em> axis shows the <em>number of taxlots sold</em> in each year.</p>",
-                position: 'bottom'
+                position: 'top'
               },/*
               {
                 element: document.querySelector('.explore-menu'),
@@ -203,7 +203,7 @@
               {
                 element: document.querySelector('#legend'),
                 intro: "<h4>Legend</h4> <p> The <strong>oldest taxlots</strong> are coloured in <strong>red</strong>. <strong>Recent taxlot sales</strong> are shown in <strong>blue</strong>.</p>",
-                position: 'top'
+                position: 'bottom'
               },
               {
                 element: document.querySelector('.mapboxgl-ctrl-nav'),
